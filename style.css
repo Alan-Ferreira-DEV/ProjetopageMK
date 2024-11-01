@@ -1,0 +1,124 @@
+html, body {
+    height: 100%; /* Garante que o body tenha 100% de altura */
+    margin: 0; /* Remove margens do body */
+    overflow: hidden; /* Evita rolagem */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fixa a imagem de fundo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Imagemdefundo/imagemdefundo.avif');
+    background-size: cover;
+    opacity: 0.5; /* 70% de transparência */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre logo e ícones */
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 825px; /* Mantém o tamanho da logo */
+    height: auto;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column; /* Coloca os ícones em coluna */
+    align-items: flex-start; /* Alinha os ícones à esquerda */
+    gap: 10px; /* Espaçamento entre os ícones */
+    margin-left: auto; /* Empurra os ícones para a direita */
+    position: absolute; /* Remove os ícones do fluxo normal */
+    right: 20%; /* Ajusta a posição dos ícones */
+    transform: translateX(0); /* Remove o deslocamento */
+}
+
+.icon-container a {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o ícone e o texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: black; /* Define a cor do texto dos links */
+    font-size: 35px; /* Aumenta o tamanho da fonte */
+    font-family: 'Updock', sans-serif; /* Adiciona a mesma font-family do footer */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+}
+
+.icon-container a:hover {
+    transform: translateY(-5px); /* Salta um pouco para cima ao passar o mouse */
+}
+
+.icon-container img {
+    width: 80px; /* Aumenta o tamanho dos ícones */
+    height: 80px; /* Aumenta a altura dos ícones */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+footer {
+    text-align: center; /* Alinha o texto ao centro */
+    position: absolute; /* Fixa o footer na parte inferior */
+    bottom: 8px; /* Espaço do fundo */
+    width: 100%; /* Largura total */
+    color: white; /* Cor do texto */
+    font-family: 'Updock', sans-serif; /* Fonte desejada */
+    font-size: 55px; /* Aumenta o tamanho da fonte */
+    padding: 0px; /* Espaçamento interno */
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Alinha logo e ícones em coluna */
+        align-items: center; /* Centraliza a logo */
+    }
+
+    .logo {
+        width: 80%; /* Ajusta a largura da logo para caber na tela */
+        max-width: 400px; /* Define um tamanho máximo para a logo */
+    }
+
+    .icon-container {
+        position: relative; /* Retorna os ícones ao fluxo normal */
+        margin: 20px 0; /* Adiciona margem em cima e embaixo */
+        align-items: flex-start; /* Alinha os ícones à esquerda */
+        right: 0; /* Remove o ajuste à direita */
+        width: 100%; /* Faz com que a container ocupe toda a largura */
+    }
+
+    .icon-container a {
+        font-size: 25px; /* Reduz o tamanho da fonte para dispositivos móveis */
+        text-align: left; /* Alinha o texto à esquerda */
+        width: 100%; /* Faz com que cada link ocupe a largura total */
+    }
+
+    footer {
+        position: fixed; /* Fixa o footer na parte inferior */
+        bottom: 0; /* Fixa o footer ao fundo */
+        font-size: 30px; /* Ajusta o tamanho da fonte do footer */
+    } /* Corrigido aqui: adicionado fechamento correto da regra */
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
